@@ -30,12 +30,12 @@ jobs:
         run: pwd
       - name: Build with Maven
         run: mvn clean install
-#      - name: Build & push Docker image
-#        uses: mr-smithers-excellent/docker-build-push@v6
-#        with:
-#          image: giaudoan/cicd
-#          tags: latest
-#          registry: docker.io
-#          dockerfile: Dockerfile
-#          username: ${{ secrets.DOCKER_USERNAME }}
-#          password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Build & push Docker image
+        uses: mr-smithers-excellent/docker-build-push@v6
+        with:
+          image: giaudoan/testt
+          tags: latest
+          registry: docker.io
+          dockerfile: Dockerfile
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
