@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:17
 EXPOSE 8080
 ADD target/testt.jar testt.jar
-ENTRYPOINT ["java","-jar","/testt.jar"]gi
+ENTRYPOINT ["java","-jar","/testt.jar"]
